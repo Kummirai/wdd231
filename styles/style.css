@@ -218,10 +218,27 @@ footer p{
         display: flex;
         flex-direction: column;
     }
-    
 
-    header{
+    .container{
         position: relative;
+    }
+
+    nav{
+        position: fixed;
+        right: 0;
+        height: 100%;
+        width: 28%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 0;
+    }
+
+    .fa-bars{
+        z-index: 1;
+        background-color: var(--primary-color);
+        padding: 0.3rem;
+        border-radius: 3px;
     }
 
     .fa-bars:hover{
@@ -238,18 +255,22 @@ footer p{
     }
 
     .show a{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         font-weight: 400;
+        margin-bottom: 3rem;
+        padding: 0.5rem ;
     }
 
     .container .image-name{
         justify-content: flex-start;
         padding: 0 1rem;
+        
     }
 
     .container .image-name h1{
         margin-left: 2rem;
         font-size: 1.4rem;
+        
     }
 
     .fa-bars{
