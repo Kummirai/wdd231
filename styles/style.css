@@ -255,7 +255,7 @@ footer p{
     .fa-bars{
         display: block;
         color: var(--accent-color-3);
-        font-size: 1.5rem;
+        width: 36px;
         position: absolute;
         top: 1rem;
         right: 1rem;
