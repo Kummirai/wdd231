@@ -76,6 +76,7 @@ nav a:hover{
     color: var(--accent-color-3);
     background-color: var(--primary-color);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 main{
@@ -156,6 +157,14 @@ figcaption{
     color: var(--accent-color-3);
     padding: 0.3rem 3rem;
     border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.classes .dept button:hover{
+    background-color: var(--accent-color-3);
+    color: var(--primary-color);
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
 }
 
 .classes .subjects{
