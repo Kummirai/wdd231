@@ -176,6 +176,15 @@ figcaption{
 
 footer{
     grid-column: 1 / 13;
+    grid-row: 12 / 13;
     background-color: var(--primary-color);
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: var(--accent-color-3);
+    font-size: 0.8rem;
 }
