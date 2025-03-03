@@ -250,6 +250,7 @@ footer p{
 
     .classes{
         min-height:fit-content;
+        margin: 2rem  1rem;
     }
 
     .classes h2{
@@ -261,6 +262,11 @@ footer p{
     .classes .dept button{
         padding: 0.3rem 2.4rem;
         margin: 0.8rem 0; 
+    }
+
+    footer{
+        margin: 0;
+        padding: 0;
     }
 
 }
