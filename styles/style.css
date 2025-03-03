@@ -89,9 +89,9 @@ main{
 
 main article, aside article{
     background-color: var(--accent-color-3);
+    box-shadow: 0 0 5px var(--acent-color-1);
     color: var(--primary-color);
     padding: 0.1rem 0;
-    border-radius: 5px 5px 0 0;
 }
 
 
@@ -130,16 +130,21 @@ figcaption{
 }
 
 .classes{
-    background-color: var(--acent-color-1);
     grid-column: 1 / 13;
     grid-row: 8 / 12;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    margin: 0 2rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 5px var(--acent-color-1);
 }
 
 .classes .heading{
     color: var(--primary-color);
+    margin: 0;
 }
 
 .classes button{
@@ -149,11 +154,28 @@ figcaption{
 .classes .dept button{
     background-color: var(--primary-color);
     color: var(--accent-color-3);
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 3rem;
     border-radius: 3px;
 }
 
-.classes .dept .subjects{
+.classes .subjects{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, )
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+
+.classes .subjects button{
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--acent-color-2);
+    border-radius: 2px;
+}
+
+footer{
+    grid-column: 1 / 13;
+    background-color: var(--primary-color);
+    margin-top: 1rem;
 }
