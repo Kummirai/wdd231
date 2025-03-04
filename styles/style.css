@@ -199,6 +199,11 @@ figcaption{
     font-weight: 700;
     text-align: center;
 }
+
+.classes .subjects div p{
+    font-weight: 500;
+    font-size: calc(0.75rem + 0.3vw);
+}
 .class-complete{
     background-color: var(--primary-color);
     color: var(--acent-color-2);
@@ -318,6 +323,22 @@ footer p{
     .classes .dept button{
         margin: 0.8rem;
         padding: 0.4rem 1.6rem;
+    }
+
+    .classes .subjects div{
+        border-radius: 2px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .class-complete{
+        background-color: var(--primary-color);
+        color: var(--acent-color-2);
+    }
+    
+    .class-odinary{
+        background-color: var(--accent-color-3);
+        color: var(--primary-color);
     }
 
     footer{
