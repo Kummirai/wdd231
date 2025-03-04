@@ -47,6 +47,7 @@ header .image-name h1{
 
 .container .image-name .image{
     max-width: calc(3.75rem + 2vw);
+    height: auto;
 }
 
 .container .image-name .image img{
@@ -131,6 +132,7 @@ aside .country{
 
 aside .country img{
     width: 100%;
+    height: auto;
 }
 
 figcaption{
