@@ -58,9 +58,9 @@ header .image-name h1{
     aspect-ratio: 1 / 1;
     object-position: top;
     border-radius: 50%;
-    padding: 0.2rem;
+    padding: 0.1rem;
     background-color: var(--acent-color-1);
-    border: 1px solid var(--acent-color-2);
+    border: 1px solid var(--accent-color-3);
 }
 
 nav{
