@@ -42,6 +42,7 @@ header .image-name h1{
     color: var(--accent-color-3);
     margin-left: 2rem;
     font-weight: 500;
+    font-size: calc(1rem + 1vw);
 }
 
 .container .image-name .image{
@@ -267,11 +268,10 @@ footer p{
         
     }
 
-    .container .image-name h1{
+    /* .container .image-name h1{
         margin-left: 2rem;
-        font-size: 1.2rem;
-        
-    }
+        font-size: 1.2rem; 
+    } */
 
     .fa-bars{
         display: block;
