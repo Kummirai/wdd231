@@ -104,7 +104,7 @@ main article, aside article{
 main article h2, aside article h2{
     text-align: center;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: calc(0.85rem + 0.2vw);
     color: var(--primary-color);
 }
 
@@ -151,7 +151,7 @@ figcaption{
 
 .classes .heading{
     color: var(--primary-color);
-    margin: 0;
+    font-size: calc(1rem + 0.8vw);
 }
 
 .classes button{
@@ -165,6 +165,7 @@ figcaption{
     color: var(--accent-color-3);
     padding: 0.3rem 3rem;
     border-radius: 3px;
+    margin-bottom: 1rem;
     border: 1px solid transparent;
 }
 
@@ -308,6 +309,7 @@ footer p{
 
     .classes .dept{
         display: flex;
+        margin-bottom: 1rem;
     }
 
     .classes .dept button{
