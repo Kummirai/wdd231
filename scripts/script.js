@@ -16,7 +16,7 @@ menu.addEventListener("click", ()=>{
     }
 });
 
-//Dynamically add courses mto course section
+//Dynamically add courses into course section
 let courseSection = "";
 
 const fillCourses = ()=>{
@@ -43,7 +43,6 @@ const fillCourses = ()=>{
 fillCourses();
 
 //filter cousrse by category
-
 const filterCourses = ()=>{
     buttons.forEach((button)=>{
         button.addEventListener("click", ()=>{
@@ -91,16 +90,6 @@ const filterCourses = ()=>{
             })
             }     
         });
-        
-        //Mark completed courses
-        // const completeCourses = courses.filter((course)=> course.isComplete)
-        // completeCourses.forEach((completeCourse)=>{
-        //         myCourses.forEach((course)=>{
-        //         if(course.innerText === completeCourse.title){
-        //             course.classList.add("class-complete")
-        //             }  
-        //         });
-        //     });
     });
 }
 

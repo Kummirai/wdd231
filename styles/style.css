@@ -1,10 +1,10 @@
 
 :root{
-    --primary-color: #16423C;
-    --secondary-color: #6A9C89;
-    --acent-color-1: #C4DAD2;
+    --primary-color: #27374D;
+    --secondary-color: #526D82;
+    --acent-color-1: #9DB2BF;
     --acent-color-2 : #fff;
-    --accent-color-3: #E9EFEC;
+    --accent-color-3: #DDE6ED;
 }
 
 body{
@@ -92,12 +92,11 @@ main{
     grid-row: 2/ 8;
     margin: 2rem 2rem 0 2rem;
     border-radius: 8px;
-    border: 1px solid var(--acent-color-1);
+    box-shadow: 0 0 5px var(--accent-color-3);
 }
 
 main article, aside article{
     background-color: var(--accent-color-3);
-    box-shadow: 0 0 5px var(--acent-color-1);
     color: var(--primary-color);
     padding: 0.1rem 0;
 }
@@ -120,7 +119,7 @@ aside{
     grid-row: 2 / 8;
     margin: 2rem 2rem 0rem 1rem;
     border-radius: 5px;
-    border: 1px solid var(--acent-color-1);
+    box-shadow: 0 0 5px var(--accent-color-3);
 }
 
 aside .country{
@@ -171,19 +170,19 @@ figcaption{
 }
 
 .classes .dept button{
-    background-color: var(--primary-color);
-    color: var(--accent-color-3);
+    background-color: var(--accent-color-3);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: 0.3rem 3rem;
     border-radius: 3px;
     margin-bottom: 1rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--acent-color-1);
 }
 
 .classes .dept button:hover{
-    background-color: var(--accent-color-3);
-    color: var(--primary-color);
     cursor: pointer;
-    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--accent-color-3);
 }
 
 .classes .subjects{
@@ -206,7 +205,7 @@ figcaption{
 }
 
 .class-odinary{
-    background-color: var(--acent-color-1);
+    background-color: var(--accent-color-3);
     color: var(--primary-color);
 }
 
