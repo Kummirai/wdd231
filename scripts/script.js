@@ -5,6 +5,7 @@ const nav = document.querySelector("nav");
 const subjects = document.querySelector(".subjects");
 const buttons = document.querySelectorAll("button");
 
+
 //Toggle navbar on smaller screens
 menu.addEventListener("click", ()=>{
     if(nav.classList.contains("none")){
@@ -22,7 +23,7 @@ let courseSection = "";
 const fillCourses = ()=>{
     courses.map((course)=>{
         courseSection += `
-            <div>
+            <div class="my-course">
                 <p>${course.title}</p>
             </div>
         `
@@ -39,7 +40,7 @@ buttons.forEach((button)=>{
     if(button.innerText === "ALL"){
         courses.map((course)=>{
             courseSection += `
-                <div>
+                <div class="my-course">
                     <p>${course.title}</p>
                 </div>
             `
@@ -49,7 +50,7 @@ buttons.forEach((button)=>{
         const selectedCourses = courses.filter((course)=> course.category === button.innerText)
         selectedCourses.map((course)=>{
             courseSection += `
-                <div>
+                <div class="my-course">
                     <p>${course.title}</p>
                 </div>
             `
@@ -60,6 +61,11 @@ buttons.forEach((button)=>{
 });
 
 
-
+//Mark completed courses
+courses.map((course)=>{
+    if(course.isComplete){
+        
+    }
+})
 
 

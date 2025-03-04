@@ -3,19 +3,19 @@ const courses = [
         id : 1,
         title : "CSE 110",
         category : "CSE",
-        isComplete : false
+        isComplete : true
     },
     {
         id : 2,
         title : "WDD 130",
         category : "WDD",
-        isComplete : false
+        isComplete : true
     },
     {
         id : 3,
         title : "CSE 111",
         category : "CSE",
-        isComplete : false
+        isComplete : true
     },
     {
         id : 4,
