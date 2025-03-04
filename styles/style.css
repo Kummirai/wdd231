@@ -141,6 +141,8 @@ figcaption{
     font-size: calc(0.75rem + 0.2vw);
 }
 
+
+
 .classes{
     grid-column: 1 / 13;
     grid-row: 8 / 12;
@@ -191,11 +193,18 @@ figcaption{
 
 
 .classes .subjects div{
-    background-color: var(--acent-color-1);
-    color: var(--primary-color);
     border-radius: 2px;
     font-weight: 700;
     text-align: center;
+}
+.class-complete{
+    background-color: var(--primary-color);
+    color: var(--acent-color-2);
+}
+
+.class-odinary{
+    background-color: var(--acent-color-1);
+    color: var(--primary-color);
 }
 
 footer{

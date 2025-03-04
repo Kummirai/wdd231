@@ -5,7 +5,6 @@ const nav = document.querySelector("nav");
 const subjects = document.querySelector(".subjects");
 const buttons = document.querySelectorAll("button");
 
-
 //Toggle navbar on smaller screens
 menu.addEventListener("click", ()=>{
     if(nav.classList.contains("none")){
@@ -23,49 +22,88 @@ let courseSection = "";
 const fillCourses = ()=>{
     courses.map((course)=>{
         courseSection += `
-            <div class="my-course">
+            <div class="my-course class-odinary">
                 <p>${course.title}</p>
             </div>
         `
     });
     subjects.innerHTML = courseSection;
+    const myCourses = document.querySelectorAll(".my-course");
+            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            myCourses.forEach((course)=>{
+                addCompletedStyles.forEach((completeCourse)=>{
+                    if(course.innerText === completeCourse.title){
+                        course.classList.add("class-complete")
+                        course.classList.remove("class-odinary")
+                    }
+                })
+            })
 };
 
 fillCourses();
 
 //filter cousrse by category
-buttons.forEach((button)=>{
-    button.addEventListener("click", ()=>{
-    courseSection = ""
-    if(button.innerText === "ALL"){
-        courses.map((course)=>{
-            courseSection += `
-                <div class="my-course">
-                    <p>${course.title}</p>
-                </div>
-            `
-        });
-        subjects.innerHTML = courseSection;
-    } else {
-        const selectedCourses = courses.filter((course)=> course.category === button.innerText)
-        selectedCourses.map((course)=>{
-            courseSection += `
-                <div class="my-course">
-                    <p>${course.title}</p>
-                </div>
-            `
+
+const filterCourses = ()=>{
+    buttons.forEach((button)=>{
+        button.addEventListener("click", ()=>{
+        courseSection = ""
+        if(button.innerText === "ALL"){
+            courses.map((course)=>{
+                courseSection += `
+                    <div class="my-course class-odinary">
+                        <p>${course.title}</p>
+                    </div>
+                `
             });
-        subjects.innerHTML = courseSection; 
-        }     
-    }); 
-});
-
-
-//Mark completed courses
-courses.map((course)=>{
-    if(course.isComplete){
+            subjects.innerHTML = courseSection;
+            const myCourses = document.querySelectorAll(".my-course");
+            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            myCourses.forEach((course)=>{
+                addCompletedStyles.forEach((completeCourse)=>{
+                    if(course.innerText === completeCourse.title){
+                        course.classList.add("class-complete")
+                        course.classList.remove("class-odinary")
+                    }
+                })
+            })
+            
+            
+        } else {
+            const selectedCourses = courses.filter((course)=> course.category === button.innerText)
+            selectedCourses.map((course)=>{
+                courseSection += `
+                    <div class="my-course class-odinary">
+                        <p>${course.title}</p>
+                    </div>
+                `
+                });
+            subjects.innerHTML = courseSection;
+            const myCourses = document.querySelectorAll(".my-course");
+            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            myCourses.forEach((course)=>{
+                addCompletedStyles.forEach((completeCourse)=>{
+                    if(course.innerText === completeCourse.title){
+                        course.classList.add("class-complete")
+                        course.classList.remove("class-odinary")
+                    }
+                })
+            })
+            }     
+        });
         
-    }
-})
+        //Mark completed courses
+        // const completeCourses = courses.filter((course)=> course.isComplete)
+        // completeCourses.forEach((completeCourse)=>{
+        //         myCourses.forEach((course)=>{
+        //         if(course.innerText === completeCourse.title){
+        //             course.classList.add("class-complete")
+        //             }  
+        //         });
+        //     });
+    });
+}
+
+filterCourses();
 
 
