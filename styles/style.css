@@ -190,12 +190,12 @@ figcaption{
 }
 
 
-.classes .subjects button{
-    padding: 0.7rem 1.2rem;
+.classes .subjects div{
     background-color: var(--acent-color-1);
     color: var(--primary-color);
     border-radius: 2px;
     font-weight: 700;
+    text-align: center;
 }
 
 footer{
