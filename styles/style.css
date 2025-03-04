@@ -109,6 +109,10 @@ main article h2, aside article h2{
 }
 
 
+ul li{
+    color: var(--primary-color);
+}
+
 aside{
     grid-column: 9 / 13;
     grid-row: 2 / 8;
@@ -251,10 +255,11 @@ footer p{
     .none{
         display: none;
     }
-
+    
     .show{
         
         display: flex;
+     
     }
 
     .show a{
@@ -269,11 +274,6 @@ footer p{
         padding: 0 1rem;
         
     }
-
-    /* .container .image-name h1{
-        margin-left: 2rem;
-        font-size: 1.2rem; 
-    } */
 
     .fa-bars{
         display: block;
