@@ -104,7 +104,7 @@ main article, aside article{
 main article h2, aside article h2{
     text-align: center;
     font-weight: 700;
-    font-size: calc(0.85rem + 0.2vw);
+    font-size: calc(0.75rem + 0.2vw);
     color: var(--primary-color);
 }
 
@@ -134,6 +134,7 @@ figcaption{
     padding: 0.5rem;
     color: var(--primary-color);
     font-weight: 500;
+    font-size: calc(0.75rem + 0.2vw);
 }
 
 .classes{
@@ -151,7 +152,7 @@ figcaption{
 
 .classes .heading{
     color: var(--primary-color);
-    font-size: calc(1rem + 0.8vw);
+    font-size: calc(1rem + 0.6vw);
 }
 
 .classes button{
