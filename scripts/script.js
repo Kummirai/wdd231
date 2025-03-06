@@ -16,7 +16,9 @@ const fillCourses = ()=>{
         `
     });
     subjects.innerHTML = courseSection;
-    numberOfCourses.innerHTML = courses.length;
+    const sum = courses.reduce((acc, course) => acc + course.credits, 0);
+    numberOfCourses.innerHTML = sum;
+
     const myCourses = document.querySelectorAll(".my-course");
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
@@ -46,15 +48,16 @@ const filterCourses = ()=>{
                 `
             });
             subjects.innerHTML = courseSection;
-            numberOfCourses.innerHTML = courses.length;
+            
+            const sum = courses.reduce((acc, course) => acc + course.credits, 0);
+            numberOfCourses.innerHTML = sum;
+
             const myCourses = document.querySelectorAll(".my-course");
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
                     const complete = `${completeCourse.subject} ${completeCourse.number}`;
                     if(course.innerText === complete){
-                        console.log(course.innerText);
-                        
                         course.classList.add("class-complete")
                         course.classList.remove("class-odinary")
                     }
@@ -72,7 +75,10 @@ const filterCourses = ()=>{
                 `
                 });
             subjects.innerHTML = courseSection;
-            numberOfCourses.innerHTML = selectedCourses.length;
+
+            const sum = selectedCourses.reduce((acc, course) => acc + course.credits, 0);
+            numberOfCourses.innerHTML = sum;
+
             const myCourses = document.querySelectorAll(".my-course");
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{

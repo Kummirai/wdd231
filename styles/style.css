@@ -148,7 +148,7 @@ ul li{
 
 .main h2, .aside  h2{
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     font-size: calc(0.8rem + 0.2vw);
     color: var(--primary-color);
     background-color: var(--accent-color-3);
@@ -280,12 +280,15 @@ footer p{
 
     .fa-bars{
         background-color: var(--primary-color);
-        padding: 0.3rem;
+        padding: 0.2rem;
         border-radius: 3px;
+        border: 1px solid var(--acent-color-1);
     }
 
     .fa-bars:hover{
         cursor: pointer;
+        color: var(--acent-color-1);
+        border:    2px solid var(--acent-color-1);
     }
 
     .none{
@@ -298,7 +301,7 @@ footer p{
 
     .show a{
         font-size: 0.8rem;
-        font-weight: 700;
+        font-weight: 500;
         padding: 0.5rem ;
         width: 100%;
     }
