@@ -236,13 +236,16 @@ footer{
     background-color: var(--primary-color);
     margin-top: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0.3rem;
 }
 
 footer p{
-    color: var(--accent-color-3);
-    font-size: 0.8rem;
+    color: var(--acent-color-2);
+    font-size: calc(.75rem + 0.1vw);
+    font-weight: 300;
 }
 
 /*media query @max width 768px */
@@ -376,8 +379,12 @@ footer p{
 
     footer{
         margin-top: 0.8rem;
-        padding: 2rem 0;
-        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    footer p{
+        padding: 0.3rem;
     }
 
 }
