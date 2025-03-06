@@ -11,7 +11,7 @@ const fillCourses = ()=>{
     courses.map((course)=>{
         courseSection += `
             <div class="my-course class-odinary">
-                <p>${course.title}</p>
+                <p>${course.subject} ${course.number}</p>
             </div>
         `
     });
@@ -21,7 +21,8 @@ const fillCourses = ()=>{
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
-                    if(course.innerText === completeCourse.title){
+                    const complete = `${completeCourse.subject} ${completeCourse.number}`;
+                    if(course.innerText === complete){
                         course.classList.add("class-complete")
                         course.classList.remove("class-odinary")
                     }
@@ -40,7 +41,7 @@ const filterCourses = ()=>{
             courses.map((course)=>{
                 courseSection += `
                     <div class="my-course class-odinary">
-                        <p>${course.title}</p>
+                        <p>${course.subject} ${course.number}</p>
                     </div>
                 `
             });
@@ -50,7 +51,10 @@ const filterCourses = ()=>{
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
-                    if(course.innerText === completeCourse.title){
+                    const complete = `${completeCourse.subject} ${completeCourse.number}`;
+                    if(course.innerText === complete){
+                        console.log(course.innerText);
+                        
                         course.classList.add("class-complete")
                         course.classList.remove("class-odinary")
                     }
@@ -63,7 +67,7 @@ const filterCourses = ()=>{
             selectedCourses.map((course)=>{
                 courseSection += `
                     <div class="my-course class-odinary">
-                        <p>${course.title}</p>
+                        <p>${course.subject} ${course.number}</p>
                     </div>
                 `
                 });
@@ -73,7 +77,8 @@ const filterCourses = ()=>{
             const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
-                    if(course.innerText === completeCourse.title){
+                    const complete = `${completeCourse.subject} ${completeCourse.number}`;
+                    if(course.innerText === complete){
                         course.classList.add("class-complete")
                         course.classList.remove("class-odinary")
                     }

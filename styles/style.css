@@ -174,6 +174,12 @@ figcaption{
     box-shadow: 0 0 5px var(--accent-color-3);
 }
 
+.classes>p{
+    margin-bottom: 0.9rem;
+    font-size: calc(0.8rem + 0.2vw);
+    color: var(--primary-color);
+}
+
 .classes .heading{
     color: var(--primary-color);
     font-size: calc(1rem + 0.6vw);
@@ -208,6 +214,9 @@ figcaption{
     gap: 10px;
 }
 
+#courses{
+    font-weight: bolder;
+}
 
 .classes .subjects div{
     border-radius: 2px;
@@ -337,7 +346,6 @@ footer p{
 
     .classes>p{
         margin-bottom: 0.9rem;
-        font-size: calc(0.75rem + 0.3vw);
     }
 
     .classes h2{
