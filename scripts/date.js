@@ -5,5 +5,4 @@ const currentDate = new Date();
 const thisYear =  currentDate.getFullYear();
 
 currentYear.innerHTML = thisYear;
-lastModified.innerHTML = currentDate
-
+lastModified.innerHTML = currentDate;
