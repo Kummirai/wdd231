@@ -6,6 +6,7 @@
     --acent-color-2 : #fff;
     --accent-color-3: #DDE6ED;
 }
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -217,7 +218,7 @@ figcaption{
 
 .classes .subjects div p{
     font-weight: 500;
-    font-size: calc(0.75rem + 0.3vw);
+    font-size: calc(0.8rem + 0.2vw);
 }
 .class-complete{
     background-color: var(--primary-color);
@@ -262,23 +263,13 @@ footer p{
         flex-direction: column;
     }
 
-    .container{
-        position: relative;
-    }
-
     nav{
-        position: fixed;
-        right: 0;
-        height: 100%;
-        width: 28%;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        z-index: 0;
     }
 
     .fa-bars{
-        z-index: 1;
         background-color: var(--primary-color);
         padding: 0.3rem;
         border-radius: 3px;
@@ -292,17 +283,15 @@ footer p{
         display: none;
     }
     
-    .show{
-        
+    .show{  
         display: flex;
-     
     }
 
     .show a{
         font-size: 0.8rem;
         font-weight: 700;
-        margin-bottom: 3rem;
         padding: 0.5rem ;
+        width: 100%;
     }
 
     .container .image-name{
@@ -346,15 +335,19 @@ footer p{
         min-height:fit-content;
     }
 
+    .classes>p{
+        margin-bottom: 0.9rem;
+        font-size: calc(0.75rem + 0.3vw);
+    }
+
     .classes h2{
        font-size: 1.3rem;
        text-align: center;
-       margin: 1rem 0;
+       margin: 1rem 0 0.45rem 0;
     }
 
     .classes .dept{
         display: flex;
-        margin-bottom: 1rem;
     }
 
     .classes .dept button{

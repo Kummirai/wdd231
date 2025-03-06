@@ -2,6 +2,7 @@ import courses from "./courses.js";
 
 const subjects = document.querySelector(".subjects");
 const buttons = document.querySelectorAll("button");
+const numberOfCourses = document.querySelector("#courses");
 
 //Dynamically add courses into course section
 let courseSection = "";
@@ -15,8 +16,9 @@ const fillCourses = ()=>{
         `
     });
     subjects.innerHTML = courseSection;
+    numberOfCourses.innerHTML = courses.length;
     const myCourses = document.querySelectorAll(".my-course");
-            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
                     if(course.innerText === completeCourse.title){
@@ -43,8 +45,9 @@ const filterCourses = ()=>{
                 `
             });
             subjects.innerHTML = courseSection;
+            numberOfCourses.innerHTML = courses.length;
             const myCourses = document.querySelectorAll(".my-course");
-            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
                     if(course.innerText === completeCourse.title){
@@ -56,7 +59,7 @@ const filterCourses = ()=>{
             
             
         } else {
-            const selectedCourses = courses.filter((course)=> course.category === button.innerText)
+            const selectedCourses = courses.filter((course)=> course.subject === button.innerText)
             selectedCourses.map((course)=>{
                 courseSection += `
                     <div class="my-course class-odinary">
@@ -65,8 +68,9 @@ const filterCourses = ()=>{
                 `
                 });
             subjects.innerHTML = courseSection;
+            numberOfCourses.innerHTML = selectedCourses.length;
             const myCourses = document.querySelectorAll(".my-course");
-            const addCompletedStyles = courses.filter((complete)=>complete.isComplete)
+            const addCompletedStyles = courses.filter((complete)=>complete.completed)
             myCourses.forEach((course)=>{
                 addCompletedStyles.forEach((completeCourse)=>{
                     if(course.innerText === completeCourse.title){
