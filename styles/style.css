@@ -6,6 +6,11 @@
     --acent-color-2 : #fff;
     --accent-color-3: #DDE6ED;
 }
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
 
 body{
     font-family: "Roboto", sans-serif;
@@ -89,10 +94,11 @@ nav a:hover{
 main{
     grid-column: 1 / 13;
     grid-row: 2/ 12;
-    margin: 0 2rem 2rem 2rem;
+    margin: 0 2rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    gap: 0.75rem;
 }
 
 main h1{
@@ -100,6 +106,8 @@ main h1{
  grid-row: 1 ;
  margin: 0;
  align-self: flex-end;
+ color: var(--primary-color);
+ font-size: calc(1rem + 0.7vw);
 }
 
 .main, .aside {
@@ -110,15 +118,28 @@ main h1{
 .main{
     grid-column: 1 / 9;
     grid-row: 2 / 8;
+    box-shadow: 0 0 02px var(--accent-color-3);
+}
+.main ul{
+    padding: 1rem 2rem;
+}
+
+ul li{
+    color: var(--primary-color);
 }
 
 .aside{
     grid-column: 9 / 13;
     grid-row: 2 / 8;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2px var(--accent-color-3);
 }
 
 .aside figure{
-    max-width: 400px;
+    max-width: 350px;
+    align-self: center;
+    padding: 1rem;
 }
 
 .aside figure img{
@@ -134,11 +155,6 @@ main h1{
     padding: 1rem;
 }
 
-ul li{
-    color: var(--primary-color);
-}
-
-
 figcaption{
     text-align: center;
     padding: 0.5rem;
@@ -147,17 +163,15 @@ figcaption{
     font-size: calc(0.75rem + 0.2vw);
 }
 
-.classes{
+.classes {
     grid-column: 1 / 13;
-    grid-row: 8 / 12;
+    grid-row: 8 / 13;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0 2rem;
     padding: 0.5rem;
-    margin-top: 1rem;
-    box-shadow: 0 0 5px var(--acent-color-1);
+    box-shadow: 0 0 5px var(--accent-color-3);
 }
 
 .classes .heading{
@@ -177,7 +191,6 @@ figcaption{
     border: 1px solid var(--primary-color);
     padding: 0.3rem 3rem;
     border-radius: 3px;
-    margin-bottom: 1rem;
     border: 1px solid var(--acent-color-1);
 }
 
@@ -200,6 +213,7 @@ figcaption{
     border-radius: 2px;
     font-weight: 700;
     text-align: center;
+    padding: 0.7rem;
 }
 
 .classes .subjects div p{
@@ -302,13 +316,30 @@ footer p{
         right: 1rem;
     }
 
-    main, aside {
-        margin: 2rem 1rem 0 1rem; 
-    } 
+    main h1 {
+        align-self: flex-start;
+        padding: 0.5rem 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 1rem;
+    }
+    .aside figure{
+        max-width: 100%;
+        align-self: center;
+        padding: 1rem;
+    }
+    
+    .aside figure img{
+        width: 100%;
+    }
 
     .classes{
+        grid-row: 9 / 13;
         min-height:fit-content;
-        margin: 2rem  1rem;
     }
 
     .classes h2{
@@ -344,7 +375,7 @@ footer p{
     }
 
     footer{
-        margin: 0;
+        margin-top: 0.8rem;
         padding: 2rem 0;
         flex-direction: column;
     }
