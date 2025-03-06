@@ -1,10 +1,7 @@
 import courses from "./courses.js";
 
-
 const subjects = document.querySelector(".subjects");
 const buttons = document.querySelectorAll("button");
-
-
 
 //Dynamically add courses into course section
 let courseSection = "";
