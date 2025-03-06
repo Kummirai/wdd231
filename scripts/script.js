@@ -1,20 +1,10 @@
 import courses from "./courses.js";
 
-const menu = document.querySelector(".fa-bars");
-const nav = document.querySelector("nav");
+
 const subjects = document.querySelector(".subjects");
 const buttons = document.querySelectorAll("button");
 
-//Toggle navbar on smaller screens
-menu.addEventListener("click", ()=>{
-    if(nav.classList.contains("none")){
-        nav.classList.remove("none");
-        nav.classList.add("show");
-    } else {
-        nav.classList.remove("show");
-        nav.classList.add("none");
-    }
-});
+
 
 //Dynamically add courses into course section
 let courseSection = "";
