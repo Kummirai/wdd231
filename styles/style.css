@@ -239,14 +239,16 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0.3rem;
+    padding: 0.5rem;
 }
 
 footer p{
     color: var(--acent-color-2);
     font-size: calc(.75rem + 0.1vw);
     font-weight: 300;
+    padding: 0.3rem;
 }
+  
 
 /*media query @max width 768px */
 
@@ -382,9 +384,4 @@ footer p{
         justify-content: space-around;
         padding: 1rem;
     }
-
-    footer p{
-        padding: 0.3rem;
-    }
-
 }
