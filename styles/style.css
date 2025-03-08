@@ -304,13 +304,11 @@ footer p{
         font-weight: 500;
         padding: 0.5rem ;
         width: 100%;
-        position: relative;
     }
 
-    .show a.active::before{
-        position: absolute;
+    .show a.active::after{
         content: "\2190";
-        left: 50px;
+        margin-left: 0.3rem;
     }
 
     .container .image-name{
