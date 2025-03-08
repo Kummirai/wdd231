@@ -304,6 +304,13 @@ footer p{
         font-weight: 500;
         padding: 0.5rem ;
         width: 100%;
+        position: relative;
+    }
+
+    .show a.active::before{
+        position: absolute;
+        content: "\2190";
+        left: 50px;
     }
 
     .container .image-name{
