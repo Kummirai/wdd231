@@ -9,6 +9,19 @@ navAchorTags.forEach((anchor)=>{
         }
 });
 
+menu.addEventListener("click", ()=>{
+    let src = menu.getAttribute("src");
+    if(src ==="images/menu.png"){
+        menu.src = "images/close.png"
+        console.log(src);
+        
+    } else if (src === "images/close.png"){
+        console.log(src);
+        
+        menu.src = "images/menu.png"
+    }
+})
+
 //Toggle navbar on smaller screens
 menu.addEventListener("click", ()=>{
     if(nav.classList.contains("none")){
