@@ -10,6 +10,11 @@ body{
     box-sizing: border-box;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
 h1, h2, h3, address, p, li, a, img, figure{
     margin: 0;
     padding: 0;
@@ -18,7 +23,11 @@ h1, h2, h3, address, p, li, a, img, figure{
 header{
     background-color: var(--primary-color);
     color:  var(--accent-color2);
+    display: flex;
+    flex-direction: column;
+    position: relative;   
 }
+
 
 .logo{
     display: flex;
@@ -32,13 +41,6 @@ header{
 
 .description p{
     font-size: 0.75rem;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    position: relative;   
 }
 
 #menu{
@@ -86,13 +88,48 @@ nav ul a:hover{
 }
 
 
-figure{
+.banner-img{
     height: 180px;
+    position: relative;
 }
 
-figure img{
+.banner-img img{
     width: 100%;
     height: 100%;
+    z-index: -1;
+}
+
+.banner-img a{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 2rem;
+    z-index: 1;
+    color: var(--primary-color);
+    padding: 0.5rem 1.8rem;
+    background-color: var(--accent-color2);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.banner-img a:hover{
+    background-color: var(--accent-color);
+}
+
+main h2{
+    padding: 0.5rem 0;
+}
+section{
+    min-height: 200px;
+}
+
+section h2{
+    padding: 0.7rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: var(--accent-color2);
 }
 
 
