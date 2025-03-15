@@ -2,7 +2,7 @@
     --primary-color: #3B1E54;
     --secondary-color: #75539c;
     --accent-color: #D4BEE4;
-    --accent-color2: #EEEEEE;
+    --accent-color2: #f7f7f7;
 }
 
 body{
@@ -124,6 +124,8 @@ main h1{
 }
 section{
     min-height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 section h2{
@@ -148,7 +150,7 @@ section h2{
     text-align: center;
     background-color: var(--accent-color2);
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     color: var(--primary-color);
 }
 
@@ -166,8 +168,9 @@ section h2{
 }
 
 .org-contact p{
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
     font-size: 0.8rem;
+    text-align: left;
 }
 
 .org-contact p span, .membership{
@@ -176,7 +179,7 @@ section h2{
 
 .org-name{
     border-bottom: 1px solid var(--accent-color);
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .org-name h3{
@@ -188,7 +191,7 @@ section h2{
 }
 
 .org-image{
-    max-width: 150px;
+    max-width: 350px;
 }
 .org-image img{
     width: 100%;
@@ -198,7 +201,7 @@ section h2{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 0;
+    padding: 0.5rem;
 }
 
 .list-view li {
@@ -206,13 +209,8 @@ section h2{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.org-name h3 {
-    margin: 10px 0;
+    border: 1px solid var(--accent-color2);
+    margin-bottom: 0.8rem;
 }
 
 .org-contact-info {
@@ -221,35 +219,22 @@ section h2{
 }
 
 .org-contact-info .org-image img {
-    max-width: 100px;
-    height: auto;
+    width: 100%;
 }
-
-.org-contact-info .org-contact p {
-    margin: 5px 0;
-}
-
-/* Grid Style */
-/* .grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-} */
 
 .grid-view .item {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--accent-color2);
     text-align: center;
 }
-
-/* Button Style */
 .toggle-btn {
     margin: 10px 0;
     padding: 10px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--accent-color2);
     border: none;
+    align-self: center;
 }
 
 footer{

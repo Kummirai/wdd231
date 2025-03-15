@@ -4,7 +4,6 @@ const getMembersData = async () => {
       const data = await response.json();
       const members =  data.businesses;
       console.log(members);
-      function generateContent() {
         const listContainer = document.getElementById('list');
         const gridContainer = document.getElementById('grid');
         members.forEach(member => {
@@ -47,11 +46,8 @@ const getMembersData = async () => {
             `;
             listContainer.innerHTML += listItem;
             gridContainer.innerHTML += article;
-        });
-    };
-
-    generateContent();
-      
+          });
+   
     } catch (error) {
       console.error("Error fetching members.json:", error);
     }
@@ -59,11 +55,15 @@ const getMembersData = async () => {
   
   getMembersData();
   
+const toggleButton = document.querySelector("toggle-btn");
+toggleButton.addEventListener("click", ()=>{
 
+  
+})
   function toggleView() {
-    var listView = document.getElementById('list');
-    var gridView = document.getElementById('grid');
-    var toggleButton = document.querySelector('.toggle-btn');
+    const listView = document.getElementById('list');
+    const gridView = document.getElementById('grid');
+    const toggleButton = document.querySelector('.toggle-btn');
 
     if (listView.style.display === "none") {
         listView.style.display = "block";
