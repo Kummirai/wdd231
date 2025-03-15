@@ -2,7 +2,7 @@
     --primary-color: #213555;
     --secondary-color: #3e5879;
     --accent-color: #D8C4B6;
-    --accent-color2: #F5EFE7;
+    --accent-color2: #fdf8f4;
 }
 
 body{
@@ -136,6 +136,9 @@ section h2{
 
 .orgs{
     padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 0.8rem;
 }
 
 .orgs article{
@@ -161,7 +164,7 @@ section h2{
 }
 
 .org-contact p{
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
     font-size: 0.8rem;
 }
 
@@ -193,6 +196,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--accent-color2);
 }
 
 footer nav{
@@ -204,17 +209,14 @@ footer nav{
 }
 
 .socials a{
-
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    margin: 0 1rem;
+    margin: 0 0.8rem;
 } 
 
 footer nav img{
     width: 24px;
-    aspect-ratio: 1 / 1;
-    padding: 0.5rem 0.6rem;
-    
+    padding: 0.5rem;
+    background-color: var(--accent-color);
+    border-radius: 50%;
 }
 
 footer .address, footer .class-info{
@@ -241,7 +243,7 @@ footer .class-info p{
 }
   
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
 
     header{
         flex-direction: row;
