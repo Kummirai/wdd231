@@ -282,4 +282,9 @@ footer .class-info p{
         color: var(--primary-color);
         background-color: var(--accent-color-2);
     }
+
+    main{
+        width: 80%;
+        align-self: center;
+    }
 }
