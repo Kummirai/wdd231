@@ -26,14 +26,13 @@ header{
     display: flex;
     flex-direction: column;
     position: relative; 
-    padding: 0 0.5rem; 
 }
 
 
 .logo{
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
 }
 
 .description h1{
