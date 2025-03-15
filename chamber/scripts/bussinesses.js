@@ -55,16 +55,11 @@ const getMembersData = async () => {
   
   getMembersData();
   
-const toggleButton = document.querySelector("toggle-btn");
-toggleButton.addEventListener("click", ()=>{
+const toggleButton = document.querySelector(".toggle-btn");
 
-  
-})
-  function toggleView() {
+toggleButton.addEventListener("click", ()=>{
     const listView = document.getElementById('list');
     const gridView = document.getElementById('grid');
-    const toggleButton = document.querySelector('.toggle-btn');
-
     if (listView.style.display === "none") {
         listView.style.display = "block";
         gridView.style.display = "none";
@@ -74,4 +69,7 @@ toggleButton.addEventListener("click", ()=>{
         gridView.style.display = "grid";
         toggleButton.textContent = "Switch to List View"; 
     }
-}
+
+})
+
+    
