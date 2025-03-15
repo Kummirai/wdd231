@@ -180,6 +180,9 @@ section h2{
 .org-name{
     border-bottom: 1px solid var(--accent-color);
     padding: 0.3rem;
+    width: 50%;
+    align-self: center;
+
 }
 
 .org-name h3{
@@ -211,11 +214,6 @@ section h2{
     padding: 10px;
     border: 1px solid var(--accent-color2);
     margin-bottom: 0.8rem;
-}
-
-.org-contact-info {
-    display: flex;
-    justify-content: space-between;
 }
 
 .org-contact-info .org-image img {
