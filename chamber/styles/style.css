@@ -320,7 +320,7 @@ footer .class-info p{
     
     ul li{
         padding: 0.1rem 2rem;
-        flex: 1 1 auto;
+        width: 100%;
     }
    
     nav ul a {
