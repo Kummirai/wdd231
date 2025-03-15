@@ -35,7 +35,7 @@ header{
     padding: 1rem 0.5rem;
 }
 
-.description h1{
+.description h2{
     font-size: 1.4rem;
 }
 
@@ -117,7 +117,7 @@ nav ul a:hover{
     background-color: var(--accent-color);
 }
 
-main h2{
+main h1{
     padding: 0.5rem;
     color: var(--primary-color);
     font-size: 1.2rem;
