@@ -6,7 +6,7 @@
       "email": "contact@techhaven.com",
       "phone": "+1 (555) 123-4567",
       "website": "https://www.techhaven.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-1.webp",
       "membership_level": "Gold",
       "address": "123 Innovation Drive, Johannesburg, South Africa"
     },
@@ -16,7 +16,7 @@
       "email": "info@greenearth.com",
       "phone": "+1 (555) 234-5678",
       "website": "https://www.greenearthorganics.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-2.webp",
       "membership_level": "Silver",
       "address": "456 Greenway Blvd, Johannesburg, South Africa"
     },
@@ -26,7 +26,7 @@
       "email": "support@swiftsolutions.com",
       "phone": "+1 (555) 345-6789",
       "website": "https://www.swiftsolutions.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-3.webp",
       "membership_level": "Platinum",
       "address": "789 Enterprise Ave, Johannesburg, South Africa"
     },
@@ -36,7 +36,7 @@
       "email": "hello@urbaneatscafe.com",
       "phone": "+1 (555) 456-7890",
       "website": "https://www.urbaneatscafe.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-4.webp",
       "membership_level": "Bronze",
       "address": "321 Downtown St, Johannesburg, South Africa"
     },
@@ -46,7 +46,7 @@
       "email": "membership@elitefitness.com",
       "phone": "+1 (555) 567-8901",
       "website": "https://www.elitefitness.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-5.webp",
       "membership_level": "Gold",
       "address": "654 Wellness Lane, Johannesburg, South Africa"
     },
@@ -56,7 +56,7 @@
       "email": "bookings@starlighttravel.com",
       "phone": "+1 (555) 678-9012",
       "website": "https://www.starlighttravel.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-6.webp",
       "membership_level": "Silver",
       "address": "987 Adventure Road, Johannesburg, South Africa"
     },
@@ -66,7 +66,7 @@
       "email": "admissions@brightfuture.com",
       "phone": "+1 (555) 789-0123",
       "website": "https://www.brightfutureacademy.com",
-      "image": "https://via.placeholder.com/150",
+      "image": "images/company-7.webp",
       "membership_level": "Platinum",
       "address": "159 Education Blvd, Johannesburg, South Africa"
     }
