@@ -134,6 +134,61 @@ section h2{
     color: var(--accent-color2);
 }
 
+.orgs{
+    padding: 0.5rem;
+}
+
+.orgs article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--accent-color2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.org-contact-info{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.org-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0.8rem;
+}
+
+.org-contact p{
+    padding-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.org-contact p span{
+    font-weight: bold;
+}
+
+.org-name{
+    border-bottom: 1px solid var(--accent-color);
+    padding: 0.5rem;
+}
+
+.org-name h3{
+    font-size: 1rem;
+}
+
+.org-name p{
+    font-size: 0.75rem;
+}
+
+.org-image{
+    max-width: 150px;
+}
+.org-image img{
+    width: 100%;
+}
+
 footer{
     display: flex;
     flex-direction: column;
