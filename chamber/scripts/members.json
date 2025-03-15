@@ -1,75 +1,74 @@
 {
-    "businesses": [
-      {
-        "name": "Tech Haven",
-        "tagline": "Innovating Your Digital World",
-        "email": "contact@techhaven.com",
-        "phone": "+1 (555) 123-4567",
-        "website": "https://www.techhaven.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Gold",
-        "address": "123 Innovation Drive, Silicon Valley, CA 94043, USA"
-      },
-      {
-        "name": "Green Earth Organics",
-        "tagline": "Pure. Fresh. Organic.",
-        "email": "info@greenearth.com",
-        "phone": "+1 (555) 234-5678",
-        "website": "https://www.greenearthorganics.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Silver",
-        "address": "456 Greenway Blvd, Portland, OR 97205, USA"
-      },
-      {
-        "name": "Swift Solutions",
-        "tagline": "Smart Solutions for Modern Businesses",
-        "email": "support@swiftsolutions.com",
-        "phone": "+1 (555) 345-6789",
-        "website": "https://www.swiftsolutions.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Platinum",
-        "address": "789 Enterprise Ave, New York, NY 10001, USA"
-      },
-      {
-        "name": "Urban Eats Café",
-        "tagline": "Taste the City’s Best",
-        "email": "hello@urbaneatscafe.com",
-        "phone": "+1 (555) 456-7890",
-        "website": "https://www.urbaneatscafe.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Bronze",
-        "address": "321 Downtown St, Chicago, IL 60607, USA"
-      },
-      {
-        "name": "Elite Fitness Club",
-        "tagline": "Your Body, Your Temple",
-        "email": "membership@elitefitness.com",
-        "phone": "+1 (555) 567-8901",
-        "website": "https://www.elitefitness.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Gold",
-        "address": "654 Wellness Lane, Los Angeles, CA 90015, USA"
-      },
-      {
-        "name": "Starlight Travel",
-        "tagline": "Your Journey Begins Here",
-        "email": "bookings@starlighttravel.com",
-        "phone": "+1 (555) 678-9012",
-        "website": "https://www.starlighttravel.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Silver",
-        "address": "987 Adventure Road, Miami, FL 33132, USA"
-      },
-      {
-        "name": "Bright Future Academy",
-        "tagline": "Empowering Minds, Shaping Futures",
-        "email": "admissions@brightfuture.com",
-        "phone": "+1 (555) 789-0123",
-        "website": "https://www.brightfutureacademy.com",
-        "image": "https://via.placeholder.com/150",
-        "membership_level": "Platinum",
-        "address": "159 Education Blvd, Boston, MA 02108, USA"
-      }
-    ]
-  }
-  
+  "businesses": [
+    {
+      "name": "Tech Haven",
+      "tagline": "Innovating Your Digital World",
+      "email": "contact@techhaven.com",
+      "phone": "+1 (555) 123-4567",
+      "website": "https://www.techhaven.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Gold",
+      "address": "123 Innovation Drive, Johannesburg, South Africa"
+    },
+    {
+      "name": "Green Earth Organics",
+      "tagline": "Pure. Fresh. Organic.",
+      "email": "info@greenearth.com",
+      "phone": "+1 (555) 234-5678",
+      "website": "https://www.greenearthorganics.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Silver",
+      "address": "456 Greenway Blvd, Johannesburg, South Africa"
+    },
+    {
+      "name": "Swift Solutions",
+      "tagline": "Smart Solutions for Modern Businesses",
+      "email": "support@swiftsolutions.com",
+      "phone": "+1 (555) 345-6789",
+      "website": "https://www.swiftsolutions.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Platinum",
+      "address": "789 Enterprise Ave, Johannesburg, South Africa"
+    },
+    {
+      "name": "Urban Eats Café",
+      "tagline": "Taste the City’s Best",
+      "email": "hello@urbaneatscafe.com",
+      "phone": "+1 (555) 456-7890",
+      "website": "https://www.urbaneatscafe.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Bronze",
+      "address": "321 Downtown St, Johannesburg, South Africa"
+    },
+    {
+      "name": "Elite Fitness Club",
+      "tagline": "Your Body, Your Temple",
+      "email": "membership@elitefitness.com",
+      "phone": "+1 (555) 567-8901",
+      "website": "https://www.elitefitness.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Gold",
+      "address": "654 Wellness Lane, Johannesburg, South Africa"
+    },
+    {
+      "name": "Starlight Travel",
+      "tagline": "Your Journey Begins Here",
+      "email": "bookings@starlighttravel.com",
+      "phone": "+1 (555) 678-9012",
+      "website": "https://www.starlighttravel.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Silver",
+      "address": "987 Adventure Road, Johannesburg, South Africa"
+    },
+    {
+      "name": "Bright Future Academy",
+      "tagline": "Empowering Minds, Shaping Futures",
+      "email": "admissions@brightfuture.com",
+      "phone": "+1 (555) 789-0123",
+      "website": "https://www.brightfutureacademy.com",
+      "image": "https://via.placeholder.com/150",
+      "membership_level": "Platinum",
+      "address": "159 Education Blvd, Johannesburg, South Africa"
+    }
+  ]
+}

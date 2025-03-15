@@ -21,10 +21,10 @@ const getMembersData = async () => {
                                 <img src="images/org-image.webp" alt=${member.name}>
                             </div>
                             <div class="org-contact">
-                                <p><span>Email: </span>${member.email}{</p>
+                                <p><span>Email: </span>${member.email}</p>
                                 <p><span>PHONE: </span>${member.phone}</p>
                                 <p><span>URL: </span><a href="#">${member.website}</a></p>
-                                <p>${member.membership_level}</p>
+                                <p><span>Membership Level: </span>${member.membership_level}</p>
                                 <p>${member.address}</p>
                             </div>
                         </div>

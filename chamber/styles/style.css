@@ -2,7 +2,7 @@
     --primary-color: #213555;
     --secondary-color: #3e5879;
     --accent-color: #D8C4B6;
-    --accent-color2: #fdf8f4;
+    --accent-color2: #fcf8f5;
 }
 
 body{
@@ -148,6 +148,7 @@ section h2{
     background-color: var(--accent-color2);
     padding: 0.5rem;
     border-radius: 0.5rem;
+    color: var(--primary-color);
 }
 
 .org-contact-info{
@@ -168,7 +169,7 @@ section h2{
     font-size: 0.8rem;
 }
 
-.org-contact p span{
+.org-contact p span, .membership{
     font-weight: bold;
 }
 
