@@ -15,7 +15,7 @@ body{
     flex-direction: column;
 }
 
-h1, h2, h3, address, p, li, a, img, figure{
+h1, h2, h3, address, p, li, a, img, figure, ul{
     margin: 0;
     padding: 0;
 }
@@ -25,7 +25,8 @@ header{
     color:  var(--accent-color2);
     display: flex;
     flex-direction: column;
-    position: relative;   
+    position: relative; 
+    padding: 0 0.5rem; 
 }
 
 
@@ -200,6 +201,7 @@ footer{
     justify-content: space-between;
     background-color: var(--primary-color);
     color: var(--accent-color2);
+    padding: 0.5rem;
 }
 
 footer nav{
@@ -231,7 +233,17 @@ footer .address h3{
 }
 
 footer p, footer address, footer a{
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+}
+
+footer p{
+    font-weight: 300;
+    padding: 0.3rem 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--accent-color2);
 }
 
 footer .class-info{
@@ -251,7 +263,7 @@ footer .class-info p{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 0 10%;
     } 
 
     .show{
@@ -285,5 +297,11 @@ footer .class-info p{
     main{
         width: 80%;
         align-self: center;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 10%;
     }
 }
