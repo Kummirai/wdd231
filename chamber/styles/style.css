@@ -2,7 +2,7 @@
     --primary-color: #3B1E54;
     --secondary-color: #75539c;
     --accent-color: #D4BEE4;
-    --accent-color2: #f7f7f7;
+    --accent-color2: #ebeaea;
 }
 
 body{
@@ -214,6 +214,7 @@ section h2{
     padding: 10px;
     border: 1px solid var(--accent-color2);
     margin-bottom: 0.8rem;
+    width: 100%;
 }
 
 .org-contact-info .org-image img {
@@ -320,7 +321,6 @@ footer .class-info p{
     
     ul li{
         padding: 0.1rem 2rem;
-        width: 100%;
     }
    
     nav ul a {
