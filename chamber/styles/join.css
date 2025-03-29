@@ -1,0 +1,162 @@
+:root {
+    /* Color Variables */
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --accent-hover: #2980b9;
+    --border-color: #bdc3c7;
+    --note-color: #7f8c8d;
+    --np-card-color: #27ae60;
+    --bronze-card-color: #cd7f32;
+    --silver-card-color: #c0c0c0;
+    --gold-card-color: #ffd700;
+}
+
+/* Join Page Specific Styles */
+.join-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.join-container h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.join-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Form Styles */
+.membership-form {
+    flex: 1 1 60%;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+.membership-form fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.membership-form legend {
+    padding: 0 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.membership-form .input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.membership-form input,
+.membership-form select,
+.membership-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+}
+
+.membership-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.note {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--note-color);
+    margin-top: 0.3rem;
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Membership Levels Styles */
+.membership-levels {
+    flex: 1 1 35%;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.level-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid;
+}
+
+.level-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.level-card p {
+    margin: 0.5rem 0;
+}
+
+.np-card { border-color: var(--np-card-color); }
+.bronze-card { border-color: var(--bronze-card-color); }
+.silver-card { border-color: var(--silver-card-color); }
+.gold-card { border-color: var(--gold-card-color); }
+
+.learn-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .join-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .membership-form,
+    .membership-levels {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}

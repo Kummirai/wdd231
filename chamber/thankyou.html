@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greater Johannesburg Chamber Directory Page | WDD 231 </title>
+    <meta name="description" content="Web Frontend Development I Chamber Directory Page">
+    <meta name="author" content="Milton Kumirai">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getDate.js" defer></script>
+    <script src="scripts/bussinesses.js" defer></script>
+    <meta name="author" content="Milton Kumirai" />
+    <meta property="og:title" content="Greater Johannesburg Chamber Directory Page | WDD 231" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/business_finance.png">
+    <meta property="og:url" content="https://kummirai.github.io/wdd231/chamber/join.html" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <!-- Use your existing header/nav -->
+
+    <main class="thankyou-container">
+        <h1>Thank You for Your Application!</h1>
+
+        <div class="application-summary">
+            <h2>Your Application Details</h2>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Business:</strong> <span id="displayBusiness"></span></p>
+            <p><strong>Membership Level:</strong> <span id="displayLevel"></span></p>
+            <p><strong>Application Date:</strong> <span id="displayDate"></span></p>
+
+            <p>We'll review your application and contact you soon. Welcome to our chamber community!</p>
+        </div>
+
+        <a href="index.html" class="return-home">Return to Home Page</a>
+    </main>
+
+    <!-- Use your existing footer -->
+
+    <script>
+        // Parse URL parameters and display submitted data
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            document.getElementById('displayName').textContent =
+                `${urlParams.get('firstName')} ${urlParams.get('lastName')}`;
+            document.getElementById('displayEmail').textContent = urlParams.get('email');
+            document.getElementById('displayPhone').textContent = urlParams.get('phone');
+            document.getElementById('displayBusiness').textContent = urlParams.get('businessName');
+            document.getElementById('displayLevel').textContent =
+                getMembershipLevelName(urlParams.get('membershipLevel'));
+            document.getElementById('displayDate').textContent = urlParams.get('timestamp');
+
+            function getMembershipLevelName(level) {
+                switch (level) {
+                    case 'np': return 'NP Membership (Non-Profit)';
+                    case 'bronze': return 'Bronze Membership';
+                    case 'silver': return 'Silver Membership';
+                    case 'gold': return 'Gold Membership';
+                    default: return 'Unknown';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
