@@ -557,54 +557,124 @@ footer nav {
     transform: translateY(-3px);
 } 
 
-footer nav img {
-    width: 24px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-color2) 0%, #ffca2c 100%);
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, var(--dark-color) 0%, #2c3034 100%);
+    color: var(--light-color);
+    padding: 2rem 1rem;
+    margin-top: auto;
+    border-top: 3px solid var(--accent-color2);
+}
+
+footer nav {
+    min-height: 4rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: var(--accent-color2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer nav img {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: transparent;
+    filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
 
 footer nav img:hover {
-    transform: scale(1.1);
+    transform: none;
+    filter: brightness(0) invert(0);
 }
 
-footer .address, footer .class-info {
-    padding-left: 0.5rem;
+footer .address, 
+footer .class-info {
+    padding: 1rem;
+    text-align: center;
 }
 
 footer .address h3 {
-    font-size: 0.9rem;
-    padding: 0.2rem 0;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    color: var(--accent-color2);
+    position: relative;
+    display: inline-block;
+}
+
+footer .address h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color2);
 }
 
 footer p, footer address, footer a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 footer p {
     font-weight: 300;
     padding: 0.3rem 0;
+    margin: 0.3rem 0;
 }
 
 footer a {
     text-decoration: none;
     color: var(--accent-color2);
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 footer a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 footer .class-info {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 footer .class-info p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     padding: 0.1rem 0;
+}
+
+footer address {
+    font-style: normal;
+    margin: 0.5rem 0;
 }
 
 /* Animations */
