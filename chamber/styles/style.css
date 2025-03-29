@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6, address, p, li, a, img, figure, ul {
     padding: 0;
 }
 
+li{
+    list-style-type: decimal;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
 
 h2{
     font-size: 1rem;
