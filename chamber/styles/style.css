@@ -43,7 +43,6 @@ header {
 }
 
 header h2 {
-    font-size: 2.5rem;
     color: var(--light-color);
     text-align: center;
     padding: 1rem 0;
@@ -282,7 +281,7 @@ h2 {
 
 .card {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     transition: all 0.3s ease;
@@ -292,17 +291,20 @@ h2 {
 .card img {
     width: 100%;
     border-radius: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 2px;
     color: var(--primary-color);
 }
 
 .card p {
     color: var(--secondary-color);
+    font-size: 0.8rem;
 }
 
 .orgs {
