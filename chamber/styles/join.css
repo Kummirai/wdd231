@@ -68,7 +68,7 @@
 .membership-form select,
 .membership-form textarea {
     width: 100%;
-    max-width: 500px;
+    max-width: 530px;
     padding: 0.8rem;
     margin-top: 0.5rem;
     border: 1px solid var(--border-color);
