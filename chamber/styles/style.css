@@ -712,6 +712,7 @@ footer address {
     
     ul li {
         padding: 0.1rem 2rem;
+        list-style-type: none;
     }
    
     nav ul a {
