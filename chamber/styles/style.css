@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #212529;       /* Blue */
-    --secondary-color: #6c757d;     /* Gray */
-    --accent-color: #198754;        /* Green */
-    --accent-color2: #ffc107;       /* Yellow */
-    --danger-color: #dc3545;        /* Red */
-    --light-color: #f8f9fa;         /* Light */
+    --primary-color: #212529;   
+    --secondary-color: #6c757d;   
+    --accent-color: #198754;       
+    --accent-color2: #ffc107;      
+    --danger-color: #dc3545;      
+    --light-color: #f8f9fa;     
     --dark-color: #212529;   
 }
 
@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6, address, p, li, a, img, figure, ul {
     padding: 0;
 }
 
+
 h2{
     font-size: 1rem;
     color: var(--primary-color);
@@ -34,8 +35,7 @@ h2{
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0b5ed7 100%);
-    color: var(--light-color);
+    background: var(--dark-color);
     display: flex;
     flex-direction: column;
     position: relative;
