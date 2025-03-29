@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #0d6efd; /* Bootstrap primary blue */
-    --secondary-color: #6c757d; /* Bootstrap secondary gray */
-    --accent-color: #198754; /* Bootstrap success green */
-    --accent-color2: #ffc107; /* Bootstrap warning yellow */
-    --danger-color: #dc3545; /* Bootstrap danger red */
-    --light-color: #f8f9fa; /* Bootstrap light */
-    --dark-color: #212529; /* Bootstrap dark */
+    --primary-color: #0d6efd;       /* Blue */
+    --secondary-color: #6c757d;     /* Gray */
+    --accent-color: #198754;        /* Green */
+    --accent-color2: #ffc107;       /* Yellow */
+    --danger-color: #dc3545;        /* Red */
+    --light-color: #f8f9fa;         /* Light */
+    --dark-color: #212529;   
 }
 
 body {
@@ -108,7 +108,6 @@ nav ul a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
     overflow: hidden;
 }
 
@@ -245,10 +244,8 @@ nav ul a:hover {
 section {
     background: linear-gradient(to bottom, var(--light-color) 0%, white 100%);
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px
 }
 
 h2 {
