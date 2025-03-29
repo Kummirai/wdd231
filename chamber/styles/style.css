@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0d6efd;       /* Blue */
+    --primary-color: #212529;       /* Blue */
     --secondary-color: #6c757d;     /* Gray */
     --accent-color: #198754;        /* Green */
     --accent-color2: #ffc107;       /* Yellow */
@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6, address, p, li, a, img, figure, ul {
     padding: 0;
 }
 
+h2{
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
 /* Header Styles */
 header {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0b5ed7 100%);
@@ -35,6 +40,20 @@ header {
     flex-direction: column;
     position: relative;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h2 {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .logo {
@@ -250,7 +269,7 @@ section {
 
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     color: var(--primary-color);
 }
@@ -277,7 +296,7 @@ h2 {
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
