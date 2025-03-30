@@ -148,6 +148,21 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
+.level-card {
+    opacity: 0; /* Start invisible */
+    transform: scale(0.95); /* Slightly smaller */
+    animation: fadeInScale 0.6s ease-out forwards;
+    animation-delay: calc(0.1s * var(--i)); /* Staggered delay */
+}
+
+/* Keyframes for animation */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Modal Styles */
 .modal {
     display: none;
