@@ -149,13 +149,11 @@ button[type="submit"]:hover {
 }
 
 .level-card {
-    opacity: 0; /* Start invisible */
-    transform: scale(0.95); /* Slightly smaller */
+    opacity: 0; 
+    transform: scale(0.95); 
     animation: fadeInScale 0.6s ease-out forwards;
-    animation-delay: calc(0.1s * var(--i)); /* Staggered delay */
-}
+    animation-delay: calc(0.1s * var(--i)); 
 
-/* Keyframes for animation */
 @keyframes fadeInScale {
     to {
         opacity: 1;
