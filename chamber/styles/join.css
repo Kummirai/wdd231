@@ -153,7 +153,7 @@ button[type="submit"]:hover {
     transform: scale(0.95); 
     animation: fadeInScale 0.6s ease-out forwards;
     animation-delay: calc(0.1s * var(--i)); 
-
+}
 @keyframes fadeInScale {
     to {
         opacity: 1;
