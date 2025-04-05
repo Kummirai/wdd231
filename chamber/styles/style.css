@@ -730,11 +730,16 @@ footer address {
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .visit-message h2 {
     color: white;
     margin-bottom: 0.5rem;
+    font-size: 3.2rem;
 }
 
 .demographics {
@@ -826,8 +831,8 @@ footer address {
 .learn-more-btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--accent-color);
-    color: white;
+    background: var(--accent-color2);
+    color: var(--dark-color);
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.85rem;
@@ -836,9 +841,9 @@ footer address {
 
 .learn-more-btn:hover {
     background: var(--dark-color);
+    color: var(--light-color);
 }
 
-/* Medium screens (641px to 1024px) */
 @media (min-width: 641px) {
     .discover-main {
         grid-template-areas:

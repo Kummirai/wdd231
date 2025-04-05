@@ -1,4 +1,3 @@
-// Load attractions from JSON
 async function loadAttractions() {
     try {
         const response = await fetch('./scripts/discover.json');
@@ -9,7 +8,6 @@ async function loadAttractions() {
     }
 }
 
-// Display attractions in the gallery
 function displayAttractions(attractions) {
     const container = document.getElementById('attractions');
     
@@ -33,7 +31,6 @@ function displayAttractions(attractions) {
     });
 }
 
-// Track visits and display message
 function trackVisits() {
     const now = Date.now();
     const lastVisit = localStorage.getItem('lastVisit');
@@ -55,7 +52,6 @@ function trackVisits() {
     localStorage.setItem('lastVisit', now);
 }
 
-// Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     loadAttractions();
     trackVisits();
