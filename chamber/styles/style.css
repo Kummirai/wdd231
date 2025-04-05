@@ -761,7 +761,7 @@ footer address {
 }
 
 .stat-card h3 {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
