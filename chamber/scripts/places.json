@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Gold Reef City",
+        "address": "Northern Parkway & Data Crescent, Ormonde, Johannesburg",
+        "description": "Gold Reef City is a popular amusement park in Johannesburg with thrilling rides, historical gold mine tours, and entertainment for all ages.",
+        "image": "images/gold-reef-city.webp"
+    },
+    {
+        "id": 2,
+        "name": "Apartheid Museum",
+        "address": "Northern Park Way and Gold Reef Rd, Johannesburg",
+        "description": "The Apartheid Museum illustrates the rise and fall of apartheid through film, text, audio and live accounts of apartheid history.",
+        "image": "images/apartheid-museum.webp"
+    },
+    {
+        "id": 3,
+        "name": "Constitution Hill",
+        "address": "11 Kotze St, Braamfontein, Johannesburg",
+        "description": "A living museum that tells the story of South Africa's journey to democracy through exhibitions and guided tours of the Old Fort prison complex.",
+        "image": "images/constitution-hill.webp"
+    },
+    {
+        "id": 4,
+        "name": "Walter Sisulu Botanical Gardens",
+        "address": "Malcolm Rd, Poortview, Roodepoort",
+        "description": "Beautiful botanical gardens featuring indigenous plants, walking trails, and the spectacular Witpoortjie Waterfall.",
+        "image": "images/botanical-gardens.webp"
+    },
+    {
+        "id": 5,
+        "name": "Neighbourgoods Market",
+        "address": "73 Juta St, Braamfontein, Johannesburg",
+        "description": "A vibrant Saturday market offering artisanal foods, crafts, live music and a great atmosphere in the heart of Braamfontein.",
+        "image": "images/neighbourgoods-market.webp"
+    },
+    {
+        "id": 6,
+        "name": "Lion & Safari Park",
+        "address": "R114 near Lanseria Airport, Gauteng",
+        "description": "Experience close encounters with lions, cheetahs, wild dogs and other African wildlife just outside Johannesburg.",
+        "image": "images/lion-park.webp"
+    },
+    {
+        "id": 7,
+        "name": "Soweto Towers",
+        "address": "Chris Hani Rd, Soweto, Johannesburg",
+        "description": "Iconic former cooling towers now used for bungee jumping and featuring vibrant murals depicting South African history.",
+        "image": "images/soweto-towers.webp"
+    },
+    {
+        "id": 8,
+        "name": "Montecasino Bird Gardens",
+        "address": "Montecasino Blvd, Fourways, Johannesburg",
+        "description": "Beautiful gardens housing hundreds of exotic bird species, reptiles and small mammals with daily flying shows.",
+        "image": "images/bird-gardens.webp"
+    }
+]
