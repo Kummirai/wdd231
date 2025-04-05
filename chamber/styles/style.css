@@ -315,7 +315,7 @@ h2 {
 .weather h3 {
     font-size: 1.4rem;
     margin-bottom: 2px;
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #1aa160 100%);
     width: 100%;
     padding: 0.5rem;
     color: var(--light-color);
