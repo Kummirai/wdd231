@@ -724,8 +724,8 @@ footer address {
 
 .visit-message {
     grid-area: visit;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1aa160 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--accent-color2) 0%, var(--accent-color2) 100%);
+    color: var(--dark-color);
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
@@ -737,7 +737,7 @@ footer address {
 }
 
 .visit-message h2 {
-    color: white;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 3.2rem;
 }
