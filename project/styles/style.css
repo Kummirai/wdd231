@@ -140,6 +140,13 @@ h2 {
     height: 580px;
 }
 
+footer{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 20px;
+}
+
 @media (max-width: 768px) {
 
     .sidebar {
