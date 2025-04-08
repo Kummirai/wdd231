@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0e284e;
+    --primary-color: #16325e;
     --secondary-color: #166088;
     --accent-color: #4fc3f7;
     --background-color: #f8f9fa;
@@ -26,7 +26,7 @@ header {
 
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 h1 {
