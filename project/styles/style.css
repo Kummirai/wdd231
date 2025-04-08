@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent {
+    background-color: var(--accent-color);
+}
+
+.background {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.text {
+    background-color: var(--text-color);
+    color: white;
+}
+
+.wireframe {
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.wireframe-box {
+    background-color: #ddd;
+    border: 1px solid #999;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+.mobile-view, .desktop-view {
+    margin-bottom: 40px;
+}
+
+.roboto-example {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.opensans-example {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.desktop-layout {
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.header-box {
+    height: 60px;
+}
+
+.search-box {
+    height: 80px;
+}
+
+.definition-box {
+    height: 300px;
+}
+
+.button-box {
+    height: 40px;
+}
+
+.favorites-box {
+    height: 150px;
+}
+
+.favorites-sidebar {
+    height: 580px;
+}
+
+@media (max-width: 768px) {
+    .desktop-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: auto;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .header-box {
+        height: 80px;
+    }
+    
+    .search-box {
+        height: 100px;
+    }
+    
+    .definition-box {
+        height: 400px;
+    }
+}
