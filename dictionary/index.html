@@ -26,13 +26,18 @@
 <body>
     <div class="container">
         <form action="">
-            <h1>Dictionary App</h1>
-            <p>Welcome to the Dictionary App! This app allows you to search for definitions of words.</p>
+            <h1>LexiFind</h1>
+            <p class="bold">Welcome to the Dictionary App! </p>
             <div class="search-container">
-                    <input type="text" id="word" name="word" required placeholder="Enter a word to search">
+                <input type="text" id="word" name="word" required placeholder="Enter a word to search">
                 <button type="submit">Search</button>
             </div>
         </form>
+        <div class="results-container">
+            <h2>Search Results</h2>
+            <div id="results"></div>
+            <div id="error-message" class="error-message"></div>
+        </div>
     </div>
 
 </body>
