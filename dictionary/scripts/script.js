@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Toggle sidebar
   hamburger.addEventListener('click', () => {
-    sidebar.classList.add('open');
+    sidebar.classList.toggle('open');
     container.classList.add('sidebar-open');
   });
 
