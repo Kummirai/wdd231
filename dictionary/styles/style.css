@@ -129,15 +129,9 @@ input[type="text"] {
   transition: border-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   outline: 1px solid var(--primary-color);
+  flex: 1;
 }
 
- {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
 
 h1 {
   font-size: 2.5rem;
@@ -276,10 +270,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.search-container input {
-  flex: 1;
-  padding: 10px;
-}
 
 .search-container button {
   padding: 10px 20px;

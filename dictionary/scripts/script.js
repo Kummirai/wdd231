@@ -1,4 +1,3 @@
-// scripts/dictionary.js
 document.addEventListener('DOMContentLoaded', function() {
   // DOM Elements
   const wordInput = document.getElementById('wordInput');
