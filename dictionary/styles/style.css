@@ -208,7 +208,7 @@
     }
   
     input[type="text"] {
-      width: 350px;
+      max-width: 500px;
     }
   
     .hamburger {
