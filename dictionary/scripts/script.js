@@ -1,10 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // DOM Elements
+document.addEventListener('DOMContentLoaded', function () {
   const wordInput = document.getElementById('wordInput');
   const searchBtn = document.getElementById('searchBtn');
   const resultsDiv = document.getElementById('results');
 
-  // Hamburger menu functionality
   const hamburger = document.querySelector('.hamburger');
   const sidebar = document.querySelector('.sidebar');
   const closeSidebar = document.querySelector('.close-sidebar');
@@ -12,10 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const favoritesList = document.getElementById('favorites-list');
   const historyList = document.getElementById('history-list');
 
-  // Track search history
   let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 
-  // Toggle sidebar
+  // Sidebar toggling
   hamburger.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     container.classList.add('sidebar-open');
@@ -26,34 +23,29 @@ document.addEventListener('DOMContentLoaded', function() {
     container.classList.remove('sidebar-open');
   });
 
-  // Function to update sidebar lists
   function updateSidebarLists() {
-    // Update favorites list
     const favorites = JSON.parse(localStorage.getItem('favoriteWords')) || [];
     favoritesList.innerHTML = favorites.map(word =>
       `<li data-word="${word}">${word} <span class="remove-favorite" data-word="${word}">×</span></li>`
     ).join('');
 
-    // Update history list
     historyList.innerHTML = searchHistory.map(word =>
       `<li data-word="${word}">${word}</li>`
     ).join('');
 
-    // Add event listeners to history items
+    // History click
     document.querySelectorAll('#history-list li').forEach(item => {
       item.addEventListener('click', async (e) => {
         const word = e.currentTarget.dataset.word;
         wordInput.value = word;
         const wordData = await fetchWordDefinition(word);
-        if (wordData) {
-          displayResults(wordData);
-        }
+        if (wordData) displayResults(wordData);
         sidebar.classList.remove('open');
         container.classList.remove('sidebar-open');
       });
     });
 
-    // Add event listeners to remove favorite buttons
+    // Remove favorite
     document.querySelectorAll('.remove-favorite').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -62,62 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
         favorites = favorites.filter(fav => fav !== word);
         localStorage.setItem('favoriteWords', JSON.stringify(favorites));
         updateSidebarLists();
-
-        // Update favorite button in main view if this word is displayed
-        const favoriteBtn = document.querySelector(`.favorite-btn[data-word="${word}"]`);
-        if (favoriteBtn) {
-          favoriteBtn.classList.remove('favorited');
-          favoriteBtn.innerHTML = '☆';
-        }
       });
     });
   }
 
-  // Update the search history when a new search is performed
   async function performSearch(word) {
     if (!searchHistory.includes(word.toLowerCase())) {
       searchHistory.unshift(word.toLowerCase());
-      // Keep only the last 10 searches
-      if (searchHistory.length > 10) {
-        searchHistory.pop();
-      }
+      if (searchHistory.length > 10) searchHistory.pop();
       localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
     }
     updateSidebarLists();
     return await fetchWordDefinition(word);
   }
 
-  // Modify your existing search button event listener to use performSearch
-  searchBtn.addEventListener('click', async (e) => {
+  // Search
+  document.getElementById('dictionaryForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const word = wordInput.value.trim();
-
-    if (!word) {
-      showModal('Please enter a word to search');
-      return;
-    }
-
+    if (!word) return showModal('Please enter a word to search');
     const wordData = await performSearch(word);
-    if (wordData) {
-      displayResults(wordData);
-    }
+    if (wordData) displayResults(wordData);
   });
 
-  // Dictionary API (Free Dictionary API)
-  const API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
-
-  // Create modal element
+  // Modal
   const modal = document.createElement('div');
   modal.className = 'modal';
   modal.innerHTML = `
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <div id="modal-message"></div>
-    </div>
-  `;
+    </div>`;
   document.body.appendChild(modal);
 
-  // Modal functionality
   const closeModal = modal.querySelector('.close-modal');
   const modalMessage = modal.querySelector('#modal-message');
 
@@ -131,34 +100,28 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   closeModal.addEventListener('click', hideModal);
-  window.addEventListener('click', (e) => {
+  window.addEventListener('click', e => {
     if (e.target === modal) hideModal();
   });
 
-  // Check if favorites exist in local storage, if not initialize
   if (!localStorage.getItem('favoriteWords')) {
     localStorage.setItem('favoriteWords', JSON.stringify([]));
   }
 
-  // Function to fetch word definition
   async function fetchWordDefinition(word) {
     try {
-      const response = await fetch(`${API_URL}${word}`);
-      if (!response.ok) {
-        throw new Error('Word not found');
-      }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      showModal(`Error: ${error.message}`);
+      const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+      if (!res.ok) throw new Error('Word not found');
+      return await res.json();
+    } catch (err) {
+      showModal(`Error: ${err.message}`);
       return null;
     }
   }
 
-  // Function to display results
   function displayResults(wordData) {
     if (!wordData || wordData.length === 0) {
-      resultsDiv.innerHTML = '<p>No definitions found for this word.</p>';
+      resultsDiv.innerHTML = '<p>No definitions found.</p>';
       return;
     }
 
@@ -173,50 +136,31 @@ document.addEventListener('DOMContentLoaded', function() {
           <button class="favorite-btn ${isFavorite ? 'favorited' : ''}" data-word="${entry.word}">
             ${isFavorite ? '★' : '☆'}
           </button>
-        </div>
-    `;
+        </div>`;
 
-    // Phonetics
-    if (entry.phonetics && entry.phonetics.length > 0) {
+    if (entry.phonetics.length > 0) {
       const phonetic = entry.phonetics.find(p => p.text) || entry.phonetics[0];
       html += `<p class="phonetic">${phonetic.text || ''}</p>`;
-
       if (phonetic.audio) {
-        html += `<audio controls src="${phonetic.audio}">Your browser does not support the audio element.</audio>`;
+        html += `<audio controls src="${phonetic.audio}">Audio not supported</audio>`;
       }
     }
 
-    // Meanings
     entry.meanings.forEach(meaning => {
-      html += `
-        <div class="meaning">
-          <h3>${meaning.partOfSpeech}</h3>
-          <ul>
-      `;
-
+      html += `<div class="meaning"><h3>${meaning.partOfSpeech}</h3><ul>`;
       meaning.definitions.slice(0, 5).forEach(def => {
         html += `<li>${def.definition}</li>`;
-        if (def.example) {
-          html += `<p class="example">Example: ${def.example}</p>`;
-        }
+        if (def.example) html += `<p class="example">Example: ${def.example}</p>`;
       });
-
-      html += `
-          </ul>
-        </div>
-      `;
+      html += `</ul></div>`;
     });
 
     html += `</div>`;
     resultsDiv.innerHTML = html;
 
-    // Add event listeners to favorite buttons
-    document.querySelectorAll('.favorite-btn').forEach(btn => {
-      btn.addEventListener('click', toggleFavorite);
-    });
+    document.querySelector('.favorite-btn').addEventListener('click', toggleFavorite);
   }
 
-  // Function to toggle favorite status
   function toggleFavorite(e) {
     const word = e.target.dataset.word.toLowerCase();
     let favorites = JSON.parse(localStorage.getItem('favoriteWords'));
@@ -236,26 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('favoriteWords', JSON.stringify(favorites));
   }
 
-  // Event listener for search button
-  searchBtn.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const word = wordInput.value.trim();
-
-    if (!word) {
-      showModal('Please enter a word to search');
-      return;
-    }
-
-    const wordData = await fetchWordDefinition(word);
-    if (wordData) {
-      displayResults(wordData);
-    }
-  });
-
-  // Optional: Allow search on Enter key
+  // Optional: enter key triggers search
   wordInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      searchBtn.click();
-    }
+    if (e.key === 'Enter') searchBtn.click();
   });
 });

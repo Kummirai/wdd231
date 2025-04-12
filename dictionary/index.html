@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dictionary App Home Page | WDD 231 </title>
-  <meta name="description" content="Web Frontend Development I Chamber Directory Page">
-  <meta name="author" content="Milton Kumirai">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="scripts/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary App Home Page | WDD 231</title>
+  <meta name="description" content="Web Frontend Development I Chamber Directory Page" />
   <meta name="author" content="Milton Kumirai" />
   <meta property="og:title" content="Dictionary Web App Page | WDD 231" />
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://kummirai.github.io/wdd231/chamber/images/business_finance.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://kummirai.github.io/wdd231/chamber/images/business_finance.png" />
   <meta property="og:url" content="https://kummirai.github.io/wdd231/dictionary/index.html" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/favicon.ico" />
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <button class="hamburger">&#9776;</button>
+      <button class="hamburger" aria-label="Open sidebar menu">&#9776;</button>
     </header>
 
-    <nav class="sidebar">
-      <button class="close-sidebar">&times;</button>
+    <nav class="sidebar" aria-label="Sidebar menu">
+      <button class="close-sidebar" aria-label="Close sidebar">&times;</button>
       <div class="sidebar-content">
         <h3>Favorites</h3>
         <ul id="favorites-list"></ul>
@@ -36,20 +34,24 @@
         <ul id="history-list"></ul>
       </div>
     </nav>
-    <div class="main-content">
+
+    <!-- Form fixed: now wraps only the search section -->
+    <main class="main-content">
       <h1>LexiFind</h1>
-      <p class="bold">Welcome to the Dictionary App! </p>
-      <div class="search-container">
-        <input type="text" id="wordInput" name="wordInput" required placeholder="Enter a word to search">
-        <button id="searchBtn">Search</button>
-      </div>
-    </div>
-    <div id="results">
-    </div>
-  </div>
-  </div>
+      <p class="bold">Welcome to the Dictionary App!</p>
+
+      <form id="dictionaryForm">
+        <div class="search-container">
+          <input type="text" id="wordInput" name="wordInput" required placeholder="Enter a word to search" />
+          <button id="searchBtn" type="submit">Search</button>
+        </div>
+      </form>
+
+      <div id="results" aria-live="polite"></div>
+    </main>
   </div>
 
+  <!-- Tip: If you use <img> or <iframe> elements below the fold, add loading="lazy" -->
 </body>
 
 </html>
