@@ -83,6 +83,7 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--primary-color);
 }
 
 .sidebar-content {
