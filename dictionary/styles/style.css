@@ -285,12 +285,11 @@ button:hover {
 
   .search-container {
     align-items: stretch;
-    width: 50%;
+    width: 100%;
   }
 
   input[type="text"] {
-    width: 100%;
-    margin-top: 10px;
+    width: 350px;
     padding: 10px;
     font-size: 1rem;
   }
