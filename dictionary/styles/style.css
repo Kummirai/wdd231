@@ -180,13 +180,13 @@ button:hover {
 }
 
 .favorite-btn.favorited {
-  color: var(--favorite-active);
+  color: var(--primary-color);
 }
 
 .phonetic,
 .example {
   font-style: italic;
-  color: var(--muted-text);
+  color: var(--accent-color);
 }
 
 .meaning h3 {
