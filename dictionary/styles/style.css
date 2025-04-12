@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #4552fd;
+  --primary-color: #1d2355;
   --primary-hover: #1868D2;
   --secondary-color: #2ecc71;
   --accent-color: #e74c3c;
@@ -136,6 +136,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 button:hover {
