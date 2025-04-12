@@ -129,8 +129,8 @@
   }
   
   button:hover {
-    background-color: #1868D2;
-    color: white;
+    color: #1868D2;
+    border: 1px solid #1868D2;
   }
   
   /* Word Result Card */
