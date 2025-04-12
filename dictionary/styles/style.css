@@ -201,11 +201,19 @@
   .close-modal:hover {
     color: black;
   }
+
+  main{
+    width: 100%;
+  }
   
   /* Responsive */
   @media screen and (min-width: 768px) {
     .search-container {
       justify-content: center;
+    }
+
+    main{
+        max-width: 600px;
     }
   
     input[type="text"] {
