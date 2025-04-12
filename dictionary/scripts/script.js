@@ -1,3 +1,5 @@
+import { fetchWordDefinition } from './api.js';
+
 document.addEventListener('DOMContentLoaded', function () {
   const wordInput = document.getElementById('wordInput');
   const searchBtn = document.getElementById('searchBtn');
@@ -108,16 +110,16 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('favoriteWords', JSON.stringify([]));
   }
 
-  async function fetchWordDefinition(word) {
-    try {
-      const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-      if (!res.ok) throw new Error('Word not found');
-      return await res.json();
-    } catch (err) {
-      showModal(`Error: ${err.message}`);
-      return null;
-    }
-  }
+  // async function fetchWordDefinition(word) {
+  //   try {
+  //     const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+  //     if (!res.ok) throw new Error('Word not found');
+  //     return await res.json();
+  //   } catch (err) {
+  //     showModal(`Error: ${err.message}`);
+  //     return null;
+  //   }
+  // }
 
   function displayResults(wordData) {
     if (!wordData || wordData.length === 0) {
