@@ -5,6 +5,105 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchBtn = document.getElementById('searchBtn');
   const resultsDiv = document.getElementById('results');
 
+  // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const closeSidebar = document.querySelector('.close-sidebar');
+  const container = document.querySelector('.container');
+  const favoritesList = document.getElementById('favorites-list');
+  const historyList = document.getElementById('history-list');
+
+  // Track search history
+  let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+  // Toggle sidebar
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    container.classList.add('sidebar-open');
+  });
+
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    container.classList.remove('sidebar-open');
+  });
+
+  // Function to update sidebar lists
+  function updateSidebarLists() {
+    // Update favorites list
+    const favorites = JSON.parse(localStorage.getItem('favoriteWords')) || [];
+    favoritesList.innerHTML = favorites.map(word =>
+      `<li data-word="${word}">${word} <span class="remove-favorite" data-word="${word}">×</span></li>`
+    ).join('');
+
+    // Update history list
+    historyList.innerHTML = searchHistory.map(word =>
+      `<li data-word="${word}">${word}</li>`
+    ).join('');
+
+    // Add event listeners to history items
+    document.querySelectorAll('#history-list li').forEach(item => {
+      item.addEventListener('click', async (e) => {
+        const word = e.currentTarget.dataset.word;
+        wordInput.value = word;
+        const wordData = await fetchWordDefinition(word);
+        if (wordData) {
+          displayResults(wordData);
+        }
+        sidebar.classList.remove('open');
+        container.classList.remove('sidebar-open');
+      });
+    });
+
+    // Add event listeners to remove favorite buttons
+    document.querySelectorAll('.remove-favorite').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const word = btn.dataset.word;
+        let favorites = JSON.parse(localStorage.getItem('favoriteWords'));
+        favorites = favorites.filter(fav => fav !== word);
+        localStorage.setItem('favoriteWords', JSON.stringify(favorites));
+        updateSidebarLists();
+
+        // Update favorite button in main view if this word is displayed
+        const favoriteBtn = document.querySelector(`.favorite-btn[data-word="${word}"]`);
+        if (favoriteBtn) {
+          favoriteBtn.classList.remove('favorited');
+          favoriteBtn.innerHTML = '☆';
+        }
+      });
+    });
+  }
+
+  // Update the search history when a new search is performed
+  async function performSearch(word) {
+    if (!searchHistory.includes(word.toLowerCase())) {
+      searchHistory.unshift(word.toLowerCase());
+      // Keep only the last 10 searches
+      if (searchHistory.length > 10) {
+        searchHistory.pop();
+      }
+      localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    }
+    updateSidebarLists();
+    return await fetchWordDefinition(word);
+  }
+
+  // Modify your existing search button event listener to use performSearch
+  searchBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const word = wordInput.value.trim();
+
+    if (!word) {
+      showModal('Please enter a word to search');
+      return;
+    }
+
+    const wordData = await performSearch(word);
+    if (wordData) {
+      displayResults(wordData);
+    }
+  });
+
   // Dictionary API (Free Dictionary API)
   const API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 

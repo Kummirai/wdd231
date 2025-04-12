@@ -26,6 +26,87 @@ body{
     align-items: center;
 }
 
+
+/* Header and Hamburger Menu */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  align-self: flex-end;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar li:hover {
+  color: #4CAF50;
+}
+
+/* Adjust main content when sidebar is open */
+.container {
+  transition: margin-left 0.3s;
+}
+
+.sidebar-open .container {
+  margin-left: 250px;
+}
 .search-container{
     display: flex;
     align-items: center;
