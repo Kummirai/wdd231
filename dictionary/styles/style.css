@@ -131,6 +131,14 @@ input[type="text"] {
   outline: 1px solid var(--primary-color);
 }
 
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -271,8 +279,6 @@ button:hover {
 .search-container input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
 .search-container button {
